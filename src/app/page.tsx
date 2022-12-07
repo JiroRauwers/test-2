@@ -3,7 +3,7 @@ import { getData } from "./fetchApi";
 import { GetDomain } from "./getDomain";
 
 const Page = async () => {
-    const data = await getData<string>("http://localhost:3000/api/getDomain")
+    const data = await getData<string>("https://centraltr.ee/api/getDomain")
 
     // @ts-ignore
     return <Suspense fallback={<></>}>
