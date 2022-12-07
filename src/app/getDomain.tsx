@@ -13,6 +13,8 @@ export const GetDomain = ({data}:Props) => {
             return Object.keys(data).map((key)=>
                 key === hostname ? data[key as any] : ''
             )[0]
+
+            console.log(hostname)
         }
         return ''
     })
@@ -21,7 +23,7 @@ export const GetDomain = ({data}:Props) => {
     useEffect(()=>{
         const func = async() =>{
         if (domain !== '') {
-            setcontent( await HomePage({ site:domain}))
+            setcontent( await HomePage({ site:domain }))
         }}
         func()
     }, [domain])
